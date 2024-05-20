@@ -159,8 +159,8 @@ const AudioTrimmer = () => {
     // fetchAndPlay();
     // router.push("/edit");
     // wavesurferObj.load(fileURL)
-    const startTime = parseFloat(regionVal.current.start);
-    const endTime = parseFloat(regionVal.current.end);
+    const startTime =regionVal.current.start;
+    const endTime = regionVal.current.end;
     let arrayBufferr = null;
     // const file = audioFileInput.files[0];
     let blob = await fetch(fileURL).then((r) => r.blob());
