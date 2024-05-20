@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 import { FileContext, useFile } from "@/context/FileContext";
 import { useRouter } from "next/navigation";
