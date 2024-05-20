@@ -17,7 +17,7 @@ const options = {
 
 const UploadFile = () => {
   const router = useRouter();
-  const inputFile = useRef(null);
+  const inputFile = useRef<any>(null);
   const { fileURL, setFileURL } = useFile();
   const [file, setFile] = useState("");
 
