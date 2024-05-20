@@ -195,7 +195,9 @@ const AudioTrimmer = () => {
     //     window.alert("Some Error occured");
     //     return;
     //   });
+    console.log(blob);
     arrayBufferr = await blob.arrayBuffer();
+
     const audioContext = new (window.AudioContext || AudioContext)();
     const audioBuffer = await audioContext.decodeAudioData(arrayBufferr);
     const duration = endTime - startTime;
