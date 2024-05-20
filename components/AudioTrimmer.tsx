@@ -131,29 +131,6 @@ const AudioTrimmer = () => {
     setZoom(e.target.value);
   };
 
-  function readAudio(file: string | Blob) {
-    return new Promise((resolve, reject) => {
-      var reader = new FileReader();
-      reader.readAsArrayBuffer(file);
-
-      //Resolve if audio gets loaded
-      reader.onload = function () {
-        console.log("Audio Loaded");
-        resolve(reader);
-      };
-
-      reader.onerror = function (error) {
-        console.log("Error while reading audio");
-        reject(error);
-      };
-
-      reader.onabort = function (abort) {
-        console.log("Aborted");
-        console.log(abort);
-        reject(abort);
-      };
-    });
-  }
 
   const handleTrim = async (e: any) => {
     // fileURL("")
